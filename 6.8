@@ -1,0 +1,15 @@
+def check(n, lst):
+    def is_inc(l):
+        return all(l[i] < l[i+1] for i in range(len(l) - 1))
+    def is_dec(l):
+        return all(l[i] > l[i+1] for i in range(len(l) - 1))
+    if is_inc(lst) or is_dec(lst):
+        return True
+    for i in range(n):
+        temp_lst = lst[:i] + lst[i+1:]
+        if is_inc(temp_lst) or is_dec(temp_lst):
+            return True
+    return False
+n = int(input())
+lst = [int(input()) for _ in range(n)]
+print(check(n, lst))
