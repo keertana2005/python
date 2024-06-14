@@ -1,0 +1,11 @@
+def dis(num):
+    num_str=str(num)
+    sum=0
+    for i in range(len(num_str)):
+        sum+=int(num_str[i]**(i+1)
+    if(sum==num):
+        return "Yes"
+    else:
+        return "No"
+num=int(input())
+print(dis(num))
