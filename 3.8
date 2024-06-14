@@ -1,0 +1,14 @@
+u = float(input())
+if u <= 199:
+    bill = u * 1.20
+elif u < 400:
+    bill = u * 1.50
+elif u < 600:
+    bill = u * 1.80
+else:
+    bill = u * 2.00
+if bill > 400:
+    bill += bill * 0.15
+if bill < 100:
+    bill = 100
+print("{:.2f}".format(bill))
