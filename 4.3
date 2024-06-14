@@ -1,0 +1,8 @@
+def digits(n):
+    count=0
+    for digit in range(10):
+        if str(n).count(str(digit))==1:
+            count+=1
+    return count
+n=int(input())
+print(digits(n))
