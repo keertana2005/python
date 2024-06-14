@@ -1,0 +1,15 @@
+S = input().strip()
+result = ""
+current_char = ""
+count = 0
+for char in S:
+    if char.isdigit():
+        count = count * 10 + int(char)  
+    else:
+        result += current_char * count
+        current_char = char  
+        count = 0  
+
+
+result += current_char * count
+print(result)
