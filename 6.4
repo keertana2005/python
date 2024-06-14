@@ -1,0 +1,7 @@
+T = int(input())
+for _ in range(T):
+    N = int(input())
+    A = [int(input()) for _ in range(N)]
+    k = int(input())
+    has_pair = any(abs(a - b) == k for i, a in enumerate(A) for b in A[i + 1:])
+    print("1" if has_pair else "0")
