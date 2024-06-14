@@ -1,0 +1,16 @@
+def print_age_message(age):
+    if age is None:
+        print("Error: Please enter a valid age.")
+    elif age < 0:
+        print("Error: Please enter a valid age.")
+    else:
+        print("You are {} years old.".format(age))
+
+try:
+    user_input = input()
+    user_age = int(user_input)
+    print_age_message(user_age)
+except ValueError:
+    print("Error: Please enter a valid age.")
+except EOFError:
+    print("Error: Please enter a valid age.")
