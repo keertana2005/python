@@ -1,0 +1,14 @@
+def find_mapping(A, B):
+    # Create a dictionary to store the indices of elements in list B
+    index_map = {}
+    for i, num in enumerate(B):
+        index_map[num] = i
+   
+    # Map the indices of elements from list A using the dictionary
+    mapping = [index_map[num] for num in A]
+    return mapping
+
+# Input
+n = int(input())
+A = list(map(int, input().split()))
+B = list(map(int, input().split()))
