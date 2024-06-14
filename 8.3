@@ -1,0 +1,11 @@
+def uncommon_words(s1, s2):
+    words_count = {}
+    for word in s1.split():
+        words_count[word] = words_count.get(word, 0) + 1
+    for word in s2.split():
+        words_count[word] = words_count.get(word, 0) + 1
+    uncommon = [word for word, count in words_count.items() if count == 1]
+    return ' '.join(uncommon)
+s1 = input()
+s2 = input()
+print(uncommon_words(s1, s2))
