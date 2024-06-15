@@ -1,7 +1,0 @@
-vov=str(input())
-if(vov=='a' or vov=='e' or vov=='i' or vov=='o' or vov=='u' ):
-    print("It's a vowel.")
-elif(vov=='y'):
-    print("Sometimes it's a vowel... Sometimes it's a consonant.")
-else:
-    print("It's a consonant.")
