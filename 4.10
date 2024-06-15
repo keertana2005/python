@@ -1,3 +1,0 @@
-n=input()
-c=len(set(n))
-print(c)
